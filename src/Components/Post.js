@@ -6,7 +6,6 @@ function Post({props, colorPicker}) {
   const colors = [ "#92DCE5", "#EF6F6C", "#FFDDA1", "#E84855", "#70C1B3", "#E8DB7D", "#FF386D", "#00BCD4", "#FF4E5A", "#800080" ];
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   return(
-  <>
   <div className="wrapper">
     <div className="container" onClick={()=> window.open(`${props.shortlink}`)} style={{cursor: "pointer"}}>
       <div className="top">
@@ -52,13 +51,13 @@ function Post({props, colorPicker}) {
               <th>Author</th>
             </tr>
             <tr>
-              <td>{props.parselyMeta["parsely-author"]}</td>
+              <td>{props.parselyMeta?.["parsely-author"]}</td>
             </tr>
             <tr>
               <th>Category</th>
             </tr>
             <tr>
-              <td>{props.parselyMeta["parsely-section"]}</td>
+              <td>{props.parselyMeta?.["parsely-section"]}</td>
             </tr>
             <tr>
               <th>Source</th>
@@ -71,7 +70,6 @@ function Post({props, colorPicker}) {
       </div>
     </div>
   </div>
-</>
   );
 }
 
