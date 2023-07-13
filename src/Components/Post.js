@@ -47,17 +47,12 @@ function Post({props, colorPicker}) {
               <td>{props.date.slice(0, 10)}</td>
               <td>{props.date.slice(11)}</td>
             </tr>
-            <tr>
-              <th>Author</th>
-            </tr>
-            <tr>
-              <td>{props.parselyMeta?.["parsely-author"]}</td>
-            </tr>
+            
             <tr>
               <th>Category</th>
             </tr>
             <tr>
-              <td>{props.parselyMeta?.["parsely-section"]}</td>
+              <td dangerouslySetInnerHTML={{__html: props.primary_category?.name}}></td>
             </tr>
             <tr>
               <th>Source</th>
