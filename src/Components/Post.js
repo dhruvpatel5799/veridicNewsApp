@@ -7,7 +7,7 @@ function Post({props, colorPicker}) {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   return(
   <div className="wrapper">
-    <div className="container" onClick={()=> window.open(`${props.shortlink}`)} style={{cursor: "pointer"}}>
+    <div className="container" onClick={()=> window.open(`${props.link}`)} style={{cursor: "pointer"}}>
       <div className="top">
         <Placeholder style={{display : isImageLoaded ? "none" : "block", height: "100%", width: "100%"}} animation="glow">
           <Placeholder style={{width: "100%", height: "100%"}} />
